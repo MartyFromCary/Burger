@@ -1,0 +1,24 @@
+body {
+    background-color: tan;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}
+
+.jumbotron {
+    background-color: lightsalmon;
+}
+
+.panel-body {
+    background-color: gainsboro;
+}
+
+p {
+    font-size: 20px;
+}
+
+.panel-title {
+    font-size: 20px;
+}

@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div class="jumbotron">
+        <h1 class="text-center">
+            <strong>Burger Town</strong>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Available</h2>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}} {{#unless this.devoured}}
+                        <li>
+                            <p>
+                                <button data-id="{{this.id}}" class="devour">Devour</button>
+                                {{this.id}}. {{this.burger_name}}
+                            </p>
+                        </li>
+                        {{/unless}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Enjoyed</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}} {{#if this.devoured}}
+                        <li>
+                            <p>
+                                {{this.id}}. {{this.burger_name}}
+                            </p>
+                        </li>
+                        {{/if}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title text-center">Create A New Burger</h3>
+        </div>
+        <div class="panel-body text-center">
+            <input type="text" class="new_burger">
+            <button type="submit" id="new_burger">Add</button>
+        </div>
+    </div>
+
+</div>
